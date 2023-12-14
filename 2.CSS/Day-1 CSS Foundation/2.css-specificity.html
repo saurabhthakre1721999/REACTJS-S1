@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+      p#para-id {
+        color: teal;
+      }
+
+      p {
+        color: tomato;
+      }
+
+      .para {
+        color: olive;
+      }
+
+      #para-id {
+        color: magenta;
+      }
+
+      .c1 {
+        color: aquamarine;
+      }
+
+      .c2 {
+        color: blueviolet;
+      }
+
+      p.c1.c2 {
+        color: springgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p>No Class or ID but normal</p>
+    <p class="para">Class</p>
+    <p id="para-id">ID</p>
+    <p class="para" id="para-id">Element with class & ID</p>
+    <h1 id="para-id">With Id</h1>
+    <hr />
+    <p class="c1">C1</p>
+    <p class="c1 c2">C1</p>
+    <p class="c2">C1</p>
+  </body>
+</html>
