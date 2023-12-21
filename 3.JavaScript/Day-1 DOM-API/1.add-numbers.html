@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addd Numbers</title>
+  </head>
+  <body>
+    <input type="text" id="num1" placeholder="Enter first number" />
+    <input type="text" id="num2" placeholder="Enter second number" />
+    <p>Sum: <span id="result"></span></p>
+    <button onclick="addNums()">Add</button>
+  </body>
+</html>
+
+<script>
+  const firstNum = document.getElementById("num1");
+  const secondNum = document.getElementById("num2");
+  const result = document.getElementById("result");
+
+  function addNums() {
+    console.log("Function called");
+    const num1Val = Number(firstNum.value);
+    const num2Val = Number(secondNum.value);
+
+    result.innerText = num1Val + num2Val;
+  }
+</script>
