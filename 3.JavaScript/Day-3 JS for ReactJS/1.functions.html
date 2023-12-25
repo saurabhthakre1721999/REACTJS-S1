@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions | Types</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  console.log("Started");
+  // Normal
+  // If you have created a function
+  // but not returing anythign then it's : Undefined
+  function addNumV1(num1, num2) {
+    // Parameters
+    return num1 + num2;
+  }
+
+  const sum = addNumV1(10, 20); // Argument
+  console.log({ sum });
+</script>
+
+<script>
+  // Arrow -> Function expression -> Variable function
+  const addNumV2 = (num1, num2) => {
+    return num1 + num2;
+  };
+
+  const addNumV3 = (num1, num2) => num1 + num2;
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block:Scope</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let a = 10;
+
+  {
+    let a1 = 20;
+    let b2 = 10;
+    var b4 = "Uday";
+  }
+
+  function addMe() {
+    let v1 = 10;
+    {
+      let v2 = 10;
+      var v3 = 30;
+    }
+  }
+  addMe();
+</script>
