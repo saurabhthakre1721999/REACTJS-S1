@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click:Events</title>
+  </head>
+  <body>
+    <button id="first">First</button>
+    <button id="second">Second</button>
+    <button id="third">Third</button>
+    <button id="fourth">Fourth</button>
+    <div id="fifth">Fifth</div>
+  </body>
+</html>
+
+<script>
+  const firstBtn = document.getElementById("first");
+  const secondBtn = document.getElementById("second");
+  const thirdBtn = document.getElementById("third");
+  const fourthBtn = document.getElementById("fourth");
+  const fifthDiv = document.getElementById("fifth");
+
+  function logActivity(activity, elementId) {
+    console.log(`${activity} ${elementId}`);
+  }
+
+  function addMouseEvents(element, elementId) {
+    element.addEventListener("mouseenter", () => {
+      logActivity("Mouse entered", elementId);
+    });
+
+    element.addEventListener("mouseleave", () => {
+      logActivity("Mouse left", elementId);
+    });
+  }
+
+  addMouseEvents(firstBtn, "First");
+  addMouseEvents(secondBtn, "Second");
+  addMouseEvents(thirdBtn, "Third");
+  addMouseEvents(fourthBtn, "Fourth");
+  addMouseEvents(fifthDiv, "Fifth");
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      onkeyup="onKeyUpSearch(event)"
+      onkeydown="onKeyDownSearch(event)"
+      onkeypress="onKeyPressSearch(event)"
+    />
+  </body>
+</html>
+
+<script>
+  function onKeyUpSearch(e) {
+    console.log("onKeyUpSearch: ", e);
+  }
+  function onKeyDownSearch(e) {
+    console.log("onKeyDownSearch: ", e);
+  }
+  function onKeyPressSearch(e) {
+    console.log("onKeyPressSearch: ", e);
+  }
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">My Button</button>
+  </body>
+</html>
+
+<script>
+  const btnElem = document.getElementById("btn");
+
+  btnElem.addEventListener("click", () => console.log("Btn Clicked"));
+  btnElem.addEventListener("mouseenter", () =>
+    console.log("mouseenter mouseenter")
+  );
+  btnElem.addEventListener("mouseleave", () => console.log("mouseleave Event"));
+</script>
