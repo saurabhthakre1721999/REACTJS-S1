@@ -1,0 +1,20 @@
+{
+  "name": "my-js-project",
+  "version": "1.0.0",
+  "description": "This is a sample project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ravi": "node ./index.js",
+    "ritesh": "node ./index2.js"
+  },
+  "keywords": [
+    "75DaysOfReactJS"
+  ],
+  "author": "xdankit",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
