@@ -19,6 +19,7 @@ const Greetings = (props) => {
 
   return (
     <div>
+      <h1>{props?.profile?.country || "NA"}</h1>
       <p style={{ color: props.color }}>
         Welcome {props.uName} from {props.company}
       </p>
