@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="uName" />
+    </div>
+
+    <h1>Hello <span id="fName1"></span></h1>
+    <h1>Welcome <span id="fName2"></span></h1>
+    <h1>Hi <span id="fName3"></span></h1>
+    <h1>Hi <span id="fName4"></span></h1>
+    <h1>Hi <span id="fName5"></span></h1>
+  </body>
+</html>
+
+<script>
+  const uNameElem = document.getElementById("uName");
+  const fName1 = document.getElementById("fName1");
+  const fName2 = document.getElementById("fName2");
+  const fName3 = document.getElementById("fName3");
+  uNameElem.addEventListener("keyup", (e) => {
+    console.log("Value: ", e.target.value);
+    fName1.innerText = e.target.value;
+    fName2.innerText = e.target.value;
+    fName3.innerText = e.target.value;
+  });
+</script>

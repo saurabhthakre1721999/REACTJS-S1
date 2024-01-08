@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
-//import Homepage from "./Day-1 JSX/Homepage.jsx";
-//import Home from "./Day-1 JSX/Home.jsx";
-import App from "./App.jsx";
-import Homepage from "./Day-1.1/Home.jsx";
+//import Greetings from "./Day-3 Class Component/1.hello.jsx";
+//import InputBox from "./Day-3 Class Component/2.input-box.jsx";
+import Counter from "./Day-3 Class Component/3.counter.jsx";
+import ToggleBtn from "./Day-3 Class Component/4.toggle-btn.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Homepage />);
+ReactDOM.createRoot(document.getElementById("root")).render(<ToggleBtn />);
