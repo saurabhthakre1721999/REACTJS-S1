@@ -6,6 +6,9 @@ const ToggleUI = () => {
   return (
     <>
       <button onClick={() => setShowData(!showData)}>Toggle below UI</button>
+      <button onClick={() => setShowData((prevState) => !prevState)}>
+        Toggle below UI
+      </button>
       {showData ? <p>I am Visible Now</p> : <p>Data is Hidden</p>}
 
       <input

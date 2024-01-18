@@ -9,6 +9,9 @@ const CounterFC = () => {
     <>
       <h1>Counter : {counter}</h1>
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
+      <button onClick={() => setCounter((prevState) => prevState + 1)}>
+        Increment
+      </button>
       <button onClick={() => setCounter(counter - 1)}>Decrement</button>
     </>
   );
