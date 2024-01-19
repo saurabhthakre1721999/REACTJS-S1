@@ -17,10 +17,12 @@ import "react-toastify/dist/ReactToastify.css";
 //import ProfileObj from "./Day-6 useState/4.profile-obj.jsx";
 //import StaleCounter from "./Day-7 useState Problems/1.stale-closure.jsx";
 //import HobbiesFunc from "./Day-7 useState Problems/3.hobbies.jsx";
-import UseEffectExamples from "./Day-8 UseEffect/1.examples.jsx";
+//import UseEffectExamples from "./Day-8 UseEffect/1.examples.jsx";
+//import ShowProducts from "./Day-9 - API Calling/1.show-products.jsx";
+import Users from "./Day-9 - API Calling/2.users-list.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <UseEffectExamples />
+    <Users />
   </>
 );
