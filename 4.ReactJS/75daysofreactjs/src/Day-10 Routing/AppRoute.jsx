@@ -16,6 +16,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  {
+    path: "*",
+    element: <h1>Nahi hai re baba :D</h1>,
+  },
 ]);
 
 const AppRouter = () => {
