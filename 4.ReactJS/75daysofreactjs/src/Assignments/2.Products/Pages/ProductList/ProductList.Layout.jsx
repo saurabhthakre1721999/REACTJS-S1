@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 const ProductList = () => {
   const [products, setProducts] = useState(null);
@@ -21,10 +22,12 @@ const ProductList = () => {
         {Array.isArray(products) &&
           products.map((item) => {
             return (
-              <ProductCard key={item.id}>
-                <ProductCardImage src={item.image} />
-                <ProductTitle>{item.title}</ProductTitle>
-              </ProductCard>
+              <Link to={`/details/${item.id}`} key={item.id}>
+                <ProductCard>
+                  <ProductCardImage src={item.image} />
+                  <ProductTitle>{item.title}</ProductTitle>
+                </ProductCard>
+              </Link>
             );
           })}
       </ProductsContainer>
@@ -45,6 +48,7 @@ const ProductCard = styled.div`
   padding: 12px;
   flex-direction: column;
   width: 200px;
+  height: 160px;
   border: 1px solid silver;
   align-items: center;
 `;
