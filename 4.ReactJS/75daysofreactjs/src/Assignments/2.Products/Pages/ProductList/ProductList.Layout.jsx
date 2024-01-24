@@ -1,7 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import {
+  ProductCard,
+  ProductCardImage,
+  ProductTitle,
+  ProductsContainer,
+} from "./ProductList.Styles";
+
 const ProductList = () => {
   const [products, setProducts] = useState(null);
 
@@ -11,6 +17,10 @@ const ProductList = () => {
       console.log("Results: ", result.data);
       setProducts(result.data || []);
     })();
+
+    return () => {
+      console.log("Unmouting List");
+    };
   }, []);
 
   return (
@@ -36,29 +46,3 @@ const ProductList = () => {
 };
 
 export default ProductList;
-
-const ProductsContainer = styled.div`
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-`;
-
-const ProductCard = styled.div`
-  display: flex;
-  padding: 12px;
-  flex-direction: column;
-  width: 200px;
-  height: 160px;
-  border: 1px solid silver;
-  align-items: center;
-`;
-
-const ProductCardImage = styled.img`
-  width: 100px;
-  height: 100px;
-`;
-
-const ProductTitle = styled.p`
-  font-size: 12px;
-  font-weight: bold;
-`;

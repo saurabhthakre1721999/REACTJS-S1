@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
+import {
+  ProductCard,
+  ProductCardImage,
+  ProductTitle,
+} from "../ProductList/ProductList.Styles";
+
 const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const { meraProductId } = useParams();
@@ -13,6 +18,10 @@ const ProductDetails = () => {
       );
       setProduct(result.data);
     })();
+
+    return () => {
+      console.log("Unmouting Details");
+    };
   }, [meraProductId]);
 
   return (
@@ -34,20 +43,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-
-const ProductCard = styled.div`
-  display: flex;
-  padding: 12px;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ProductCardImage = styled.img`
-  width: 100px;
-  height: 100px;
-`;
-
-const ProductTitle = styled.p`
-  font-size: 12px;
-  font-weight: bold;
-`;
