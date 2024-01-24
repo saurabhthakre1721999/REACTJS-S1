@@ -21,10 +21,11 @@ import "react-toastify/dist/ReactToastify.css";
 //import ShowProducts from "./Day-9 - API Calling/1.show-products.jsx";
 //import Users from "./Day-9 - API Calling/2.users-list.jsx";
 //import AutocompleteExample from "./Assignments/1.Autocomplete/pages/AutocompleteExample.Layout.jsx";
-import AppRouter from "./Day-10 Routing/AppRoute.jsx";
+//import AppRouter from "./Day-10 Routing/AppRoute.jsx";
+import Home from "./Assignments/2.Products/Pages/Home.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <AppRouter />
+    <Home />
   </>
 );
