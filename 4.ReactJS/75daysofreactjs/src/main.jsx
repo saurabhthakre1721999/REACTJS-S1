@@ -23,6 +23,7 @@ import "react-toastify/dist/ReactToastify.css";
 //import AutocompleteExample from "./Assignments/1.Autocomplete/pages/AutocompleteExample.Layout.jsx";
 //import AppRouter from "./Day-10 Routing/AppRoute.jsx";
 import Home from "./Assignments/2.Products/Pages/Home.jsx";
+//import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>

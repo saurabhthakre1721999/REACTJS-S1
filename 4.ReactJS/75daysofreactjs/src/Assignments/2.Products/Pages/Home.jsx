@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ProductList from "./ProductList/ProductList.Layout";
 import ProductDetails from "./ProductDetails/ProductDetails.Layout";
 import QueryParams from "../../../Day-10-V2/1.query-params";
+import WithQueryParams from "../../../Day-11- Query Params/2.with-query-params";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
 
   {
     path: "/search",
-    element: <QueryParams />,
+    element: <WithQueryParams />,
   },
 ]);
 
