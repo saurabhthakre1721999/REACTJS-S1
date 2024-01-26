@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 const WithQueryParams = () => {
   const [queryParams, setQueryParams] = useSearchParams();
 
+  // ?name=sakshi&color=red&fontSize=10
   const name = queryParams.get("name") || "";
   const color = queryParams.get("color") || "";
   const fontSize = queryParams.get("fontSize") || "";

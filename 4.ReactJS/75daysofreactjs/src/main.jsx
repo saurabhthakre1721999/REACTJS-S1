@@ -22,11 +22,13 @@ import "react-toastify/dist/ReactToastify.css";
 //import Users from "./Day-9 - API Calling/2.users-list.jsx";
 //import AutocompleteExample from "./Assignments/1.Autocomplete/pages/AutocompleteExample.Layout.jsx";
 //import AppRouter from "./Day-10 Routing/AppRoute.jsx";
-import Home from "./Assignments/2.Products/Pages/Home.jsx";
+//import Home from "./Assignments/2.Products/Pages/Home.jsx";
+//import CounterParent from "./Day-12 Unecessary-Re-render/1.counter-parent.jsx";
+import CounterParentV2 from "./Day-12 Saving Unecessary-Re-render/1.counter-parent.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <Home />
+    <CounterParentV2 />
   </>
 );
