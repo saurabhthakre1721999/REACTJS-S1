@@ -20,7 +20,7 @@ const CounterParentV2 = () => {
       <GreetingsChild />
       <GreetingsChild />
       <GreetingsChild />
-      <GreetingsChild />
+      <GreetingsChild counter={counter} />
       <GreetingsChild />
       <GreetingsChild />
       <GreetingsChild />

@@ -24,11 +24,14 @@ import "react-toastify/dist/ReactToastify.css";
 //import AppRouter from "./Day-10 Routing/AppRoute.jsx";
 //import Home from "./Assignments/2.Products/Pages/Home.jsx";
 //import CounterParent from "./Day-12 Unecessary-Re-render/1.counter-parent.jsx";
-import CounterParentV2 from "./Day-12 Saving Unecessary-Re-render/1.counter-parent.jsx";
+//import CounterParentV2 from "./Day-12 Saving Unecessary-Re-render/1.counter-parent.jsx";
+import VoiceToText from "./Assignments/3.VoiceToText/Voice.jsx";
+import { ToastContainer } from "react-toastify";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <CounterParentV2 />
+    <VoiceToText />
+    <ToastContainer />
   </>
 );
