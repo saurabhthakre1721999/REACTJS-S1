@@ -27,10 +27,12 @@ import "react-toastify/dist/ReactToastify.css";
 //import CounterParentV2 from "./Day-12 Saving Unecessary-Re-render/1.counter-parent.jsx";
 import VoiceToText from "./Assignments/3.VoiceToText/Voice.jsx";
 import { ToastContainer } from "react-toastify";
+import LoadingCircle from "./Day-13 - Animations/loadingCircle.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
+    <LoadingCircle />
     <VoiceToText />
     <ToastContainer />
   </>
