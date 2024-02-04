@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   useEffect(() => {
+    document.title = "Varun | About Us";
     console.log("About is mounted");
 
     return () => {

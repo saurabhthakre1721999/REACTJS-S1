@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   useEffect(() => {
+    document.title = "Varun | Contact us";
     console.log("Contact is mounted");
 
     return () => {

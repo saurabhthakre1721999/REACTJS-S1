@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import { ToastContainer } from "react-toastify";
 //import Greetings from "./Day-3 Class Component/1.hello.jsx";
 //import InputBox from "./Day-3 Class Component/2.input-box.jsx";
 //import Counter from "./Day-3 Class Component/3.counter.jsx";
@@ -25,15 +26,16 @@ import "react-toastify/dist/ReactToastify.css";
 //import Home from "./Assignments/2.Products/Pages/Home.jsx";
 //import CounterParent from "./Day-12 Unecessary-Re-render/1.counter-parent.jsx";
 //import CounterParentV2 from "./Day-12 Saving Unecessary-Re-render/1.counter-parent.jsx";
-import VoiceToText from "./Assignments/3.VoiceToText/Voice.jsx";
-import { ToastContainer } from "react-toastify";
-import LoadingCircle from "./Day-13 - Animations/loadingCircle.jsx";
+//import VoiceToText from "./Assignments/3.VoiceToText/Voice.jsx";
+//import { ToastContainer } from "react-toastify";
+//import LoadingCircle from "./Day-13 - Animations/loadingCircle.jsx";
+//import AppRouter from "./Day-10 Routing/AppRoute.jsx";
+import Products from "./Assignments/4.NoNetworkView/pages/Products/Products.Layout.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <LoadingCircle />
-    <VoiceToText />
+    <Products />
     <ToastContainer />
   </>
 );
