@@ -30,12 +30,17 @@ import "react-toastify/dist/ReactToastify.css";
 //import { ToastContainer } from "react-toastify";
 //import LoadingCircle from "./Day-13 - Animations/loadingCircle.jsx";
 //import AppRouter from "./Day-10 Routing/AppRoute.jsx";
-import Products from "./Assignments/4.NoNetworkView/pages/Products/Products.Layout.jsx";
+//import Products from "./Assignments/4.NoNetworkView/pages/Products/Products.Layout.jsx";
+import PerformanceIssue from "./Day-14 Performance/1.performance-issue.jsx";
+import Issues from "./Day-14 Performance/3.Issue-Fix.jsx";
+import IssuesFix from "./Day-14 Performance/3.Issue-Fix.jsx";
+import ProductListWithFiltersWithOutUseMemo from "./Day-14 Performance/4.API-Performance-issue.jsx";
+import ProductListWithFiltersWithUseMemo from "./Day-14 Performance/5.product-list-with-filters-with-useMemo.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <Products />
+    <ProductListWithFiltersWithUseMemo />
     <ToastContainer />
   </>
 );

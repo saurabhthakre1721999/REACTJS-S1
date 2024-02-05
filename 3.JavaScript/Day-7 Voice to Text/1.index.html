@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Voice to Text</title>
+  </head>
+  <body>
+    <button id="startButton">Start Voice Input</button>
+    <div id="output"></div>
+
+    <script>
+      // JavaScript code will go here
+      const startButton = document.getElementById("startButton");
+      const outputDiv = document.getElementById("output");
+
+      const recognition = new (window.SpeechRecognition ||
+        window.webkitSpeechRecognition ||
+        window.mozSpeechRecognition ||
+        window.msSpeechRecognition)();
+      recognition.lang = "en-US";
+      recognition.interimResults = true; // Enable interim results
+
+      recognition.onstart = () => {
+        //Logic to write whenever user is speaking
+        startButton.textContent = "Listening...";
+      };
+
+      recognition.onresult = (event) => {
+        let transcript = "";
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            transcript += event.results[i][0].transcript;
+          } else {
+            transcript += event.results[i][0].transcript + " ";
+          }
+        }
+        outputDiv.textContent = transcript;
+      };
+
+      recognition.onend = () => {
+        startButton.textContent = "Start Voice Input";
+      };
+
+      recognition.onerror = (err) => {
+        console.log("Error: ", err);
+        alert(
+          "Boss! You're not allowed to use this feature. Please allow voice permission"
+        );
+      };
+
+      startButton.addEventListener("click", () => {
+        recognition.start();
+      });
+    </script>
+  </body>
+</html>
