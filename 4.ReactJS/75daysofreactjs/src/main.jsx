@@ -36,11 +36,12 @@ import Issues from "./Day-14 Performance/3.Issue-Fix.jsx";
 import IssuesFix from "./Day-14 Performance/3.Issue-Fix.jsx";
 import ProductListWithFiltersWithOutUseMemo from "./Day-14 Performance/4.API-Performance-issue.jsx";
 import ProductListWithFiltersWithUseMemo from "./Day-14 Performance/5.product-list-with-filters-with-useMemo.jsx";
+import Parent from "./Day-15/Parent.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <ProductListWithFiltersWithUseMemo />
+    <Parent />
     <ToastContainer />
   </>
 );
