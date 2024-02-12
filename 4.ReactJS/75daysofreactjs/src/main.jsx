@@ -38,11 +38,12 @@ import "react-toastify/dist/ReactToastify.css";
 //import ProductListWithFiltersWithUseMemo from "./Day-14 Performance/5.product-list-with-filters-with-useMemo.jsx";
 //import Parent from "./Day-15/Parent.jsx";
 //import Home from "./Day-16 Prop Drilling/Home.jsx";
-import HomeUsingContext from "./Day-16 Context API/Home.jsx";
+//import HomeUsingContext from "./Day-16 Context API/Home.jsx";
+import HomeUsingContextV2 from "./Day-16 Context API-v2/Home.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <HomeUsingContext />
+    <HomeUsingContextV2 />
   </>
 );
