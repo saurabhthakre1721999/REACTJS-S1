@@ -31,17 +31,18 @@ import "react-toastify/dist/ReactToastify.css";
 //import LoadingCircle from "./Day-13 - Animations/loadingCircle.jsx";
 //import AppRouter from "./Day-10 Routing/AppRoute.jsx";
 //import Products from "./Assignments/4.NoNetworkView/pages/Products/Products.Layout.jsx";
-import PerformanceIssue from "./Day-14 Performance/1.performance-issue.jsx";
-import Issues from "./Day-14 Performance/3.Issue-Fix.jsx";
-import IssuesFix from "./Day-14 Performance/3.Issue-Fix.jsx";
-import ProductListWithFiltersWithOutUseMemo from "./Day-14 Performance/4.API-Performance-issue.jsx";
-import ProductListWithFiltersWithUseMemo from "./Day-14 Performance/5.product-list-with-filters-with-useMemo.jsx";
-import Parent from "./Day-15/Parent.jsx";
+//import PerformanceIssue from "./Day-14 Performance/1.performance-issue.jsx";
+//import Issues from "./Day-14 Performance/3.Issue-Fix.jsx";
+//import IssuesFix from "./Day-14 Performance/3.Issue-Fix.jsx";
+//import ProductListWithFiltersWithOutUseMemo from "./Day-14 Performance/4.API-Performance-issue.jsx";
+//import ProductListWithFiltersWithUseMemo from "./Day-14 Performance/5.product-list-with-filters-with-useMemo.jsx";
+//import Parent from "./Day-15/Parent.jsx";
+//import Home from "./Day-16 Prop Drilling/Home.jsx";
+import HomeUsingContext from "./Day-16 Context API/Home.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <Parent />
-    <ToastContainer />
+    <HomeUsingContext />
   </>
 );
