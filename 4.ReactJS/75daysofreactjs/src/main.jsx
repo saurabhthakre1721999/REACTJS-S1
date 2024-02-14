@@ -39,11 +39,17 @@ import "react-toastify/dist/ReactToastify.css";
 //import Parent from "./Day-15/Parent.jsx";
 //import Home from "./Day-16 Prop Drilling/Home.jsx";
 //import HomeUsingContext from "./Day-16 Context API/Home.jsx";
-import HomeUsingContextV2 from "./Day-16 Context API-v2/Home.jsx";
+//import HomeUsingContextV2 from "./Day-16 Context API-v2/Home.jsx";
+//import NestedData from "./Questions/NestedData.jsx";
+import Calcualtor from "./Day-17 - useState Calculator/1.calculator.jsx";
+import CalcualtorUseReducer from "./Day-17 useReducer/1.calculator.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <HomeUsingContextV2 />
+    <Calcualtor />
+    <hr />
+    <CalcualtorUseReducer />
+    <ToastContainer />
   </>
 );
