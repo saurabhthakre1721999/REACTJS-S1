@@ -6,10 +6,8 @@ const RefParent = () => {
 
   const onFocusChildInput = () => {
     if (!inputRef.current) return;
-    //inputRef.current.focus();
-    //inputRef.current.value = "Sumit";
-
-    inputRef.current.innerText = "Vishal";
+    inputRef.current.focus();
+    inputRef.current.value = "Sumit";
   };
 
   console.log("Parent Re-Render");
