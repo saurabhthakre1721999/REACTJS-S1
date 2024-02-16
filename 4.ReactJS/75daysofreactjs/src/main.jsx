@@ -45,11 +45,12 @@ import "react-toastify/dist/ReactToastify.css";
 //import CalcualtorUseReducer from "./Day-17 useReducer/1.calculator.jsx";
 //import ProblemFocus from "./Day-18 - Refs/1.problem-focus.jsx";
 //import ProblemFocusFix from "./Day-18 - Refs/2.problem-fix-with-useRef.jsx";
-import RefParent from "./Day-18 - Refs/Forward-Ref/Parent.jsx";
+//import RefParent from "./Day-18 - Refs/Forward-Ref/Parent.jsx";
+import XSSTodoList from "./Assignments/5.XSS/XSS-Demo.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <RefParent />
+    <XSSTodoList />
   </>
 );
