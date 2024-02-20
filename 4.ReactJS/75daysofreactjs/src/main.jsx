@@ -47,10 +47,11 @@ import "react-toastify/dist/ReactToastify.css";
 //import ProblemFocusFix from "./Day-18 - Refs/2.problem-fix-with-useRef.jsx";
 //import RefParent from "./Day-18 - Refs/Forward-Ref/Parent.jsx";
 import XSSTodoList from "./Assignments/5.XSS/XSS-Demo.jsx";
+import RefParent from "./Day-18 - Refs/Forward-Ref/Parent.jsx";
 //import WithOutQueryParams from "./Day-11- Query Params/1.without-queryParams.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <XSSTodoList />
+    <RefParent />
   </>
 );
