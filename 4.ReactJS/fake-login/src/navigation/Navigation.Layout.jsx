@@ -4,30 +4,27 @@ import Login from "../pages/Login/Login.Layout";
 import Orders from "../pages/Orders/Order.Layout";
 import ProtectedView from "../components/templates/ProtectedView/ProtectedView.Component";
 
+const wrapperWithProtected = (Uday) => {
+  console.log({ Uday });
+  return (
+    <ProtectedView>
+      <Uday />
+    </ProtectedView>
+  );
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <ProtectedView>
-        <Home />
-      </ProtectedView>
-    ),
+    element: wrapperWithProtected(Home),
   },
   {
     path: "/login",
-    element: (
-      <ProtectedView>
-        <Login />
-      </ProtectedView>
-    ),
+    element: wrapperWithProtected(Login),
   },
   {
     path: "/orders",
-    element: (
-      <ProtectedView>
-        <Orders />
-      </ProtectedView>
-    ),
+    element: wrapperWithProtected(Orders),
   },
 ]);
 
