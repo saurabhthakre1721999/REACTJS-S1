@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/Auth.Context";
+import { routesMap } from "./Navigation.Layout";
 
 const ProtectedView = ({ children }) => {
   const { pathname } = useLocation();
@@ -7,12 +8,16 @@ const ProtectedView = ({ children }) => {
 
   console.log({ userProfile });
 
-  if (pathname === "/login" && !userProfile) {
+  if (pathname === routesMap.login && !userProfile) {
     return children;
   }
 
+  if (pathname === routesMap.login && userProfile) {
+    return <Navigate to={routesMap.root} replace={true} />;
+  }
+
   if (!userProfile) {
-    return <Navigate to="/login" replace={true} />;
+    return <Navigate to={routesMap.login} replace={true} />;
   }
 
   return children;
