@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
-import Home from "../pages/Home.Layout";
-import Login from "../pages/Login.Layout";
-import Contact from "../pages/Contact.Layout";
 import ProtectedView from "./ProtectedView";
+import React, { Suspense } from "react";
+
+const Home = React.lazy(() => import("../pages/Home.Layout"));
+const Login = React.lazy(() => import("../pages/Login.Layout"));
+const Contact = React.lazy(() => import("../pages/Contact.Layout"));
 
 export const routesMap = {
   root: "/",
@@ -15,46 +17,56 @@ const router = createBrowserRouter([
   {
     path: routesMap.root,
     element: (
-      <ProtectedView>
-        <Home />
-      </ProtectedView>
+      <Suspense fallback={<div class="loader"></div>}>
+        <ProtectedView>
+          <Home />
+        </ProtectedView>
+      </Suspense>
     ),
   },
   {
     path: routesMap.home,
     element: (
-      <ProtectedView>
-        <Home />
-      </ProtectedView>
+      <Suspense fallback={<div class="loader"></div>}>
+        <ProtectedView>
+          <Home />
+        </ProtectedView>
+      </Suspense>
     ),
   },
   {
     path: routesMap.login,
     element: (
-      <ProtectedView>
-        <Login />
-      </ProtectedView>
+      <Suspense fallback={<div class="loader"></div>}>
+        <ProtectedView>
+          <Login />
+        </ProtectedView>
+      </Suspense>
     ),
   },
   {
     path: routesMap.contact,
     element: (
-      <ProtectedView>
-        <Contact />
-      </ProtectedView>
+      <Suspense fallback={<div class="loader"></div>}>
+        <ProtectedView>
+          <Contact />
+        </ProtectedView>
+      </Suspense>
     ),
   },
   {
     path: "*",
     element: (
-      <>
-        <h1>Oops! It's 404</h1>
-        <div>
-          <Link to={routesMap.root}>Go to home</Link>
-          <br />
-          <Link to={routesMap.login}>Go to Login</Link>
-        </div>
-      </>
+      <Suspense fallback={<div class="loader"></div>}>
+        <>
+          <h1>Oops! It's 404</h1>
+          <div>
+            <Link to={routesMap.root}>Go to home</Link>
+            <br />
+            <Link to={routesMap.login}>Go to Login</Link>
+          </div>
+        </>
+      </Suspense>
     ),
   },
 ]);
