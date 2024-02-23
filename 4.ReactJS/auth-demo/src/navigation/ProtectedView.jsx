@@ -1,6 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "../contexts/Auth.Context";
+import { authContext, useAuth } from "../contexts/Auth.Context";
 import { routesMap } from "./Navigation.Layout";
+import { useContext } from "react";
 
 const ProtectedView = ({ children }) => {
   const { pathname } = useLocation();

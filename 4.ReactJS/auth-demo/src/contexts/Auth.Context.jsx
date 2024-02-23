@@ -1,49 +1,45 @@
-import { createContext, useCallback, useContext, useState } from "react";
+import React, { createContext, useCallback, useContext, useState } from "react";
 import {
-  clearCookie,
-  getDataFromCookie,
-  setDataInCookie,
-} from "../services/cookies.service";
+  clearSession,
+  getLoggedInProfile,
+  saveSession,
+} from "../services/session.service";
 
+// Create context for authentication
 const authContext = createContext();
 
+// Custom hook for using authentication context
+export const useAuth = () => {
+  return useContext(authContext);
+};
+
+// AuthProvider component for managing authentication state
 const AuthProvider = ({ children }) => {
-  const loadSession = () => {
-    try {
-      return JSON.parse(getDataFromCookie("profile"));
-    } catch (err) {
-      return null;
-    }
-  };
-  const [userProfile, setUserProfile] = useState(loadSession());
+  // Initialize user profile state with the logged-in user's data
+  const [userProfile, setUserProfile] = useState(getLoggedInProfile());
 
-  console.log({ userProfile });
-
+  // Callback function to handle user sign out
   const onSignOut = useCallback(() => {
-    clearCookie();
+    clearSession();
+    // Reset user profile state on sign out
+    setUserProfile(null);
   }, []);
 
+  // Callback function to save session data and update user profile state
   const onSaveSession = useCallback(
     ({ userToken, refreshToken, ...profile }) => {
-      setDataInCookie("isLoggedIn", true);
-      setDataInCookie("userToken", userToken);
-      setDataInCookie("refreshUserToken", refreshToken);
-      setDataInCookie("profile", JSON.stringify(profile));
+      saveSession({ userToken, refreshToken, ...profile });
       setUserProfile(profile);
-
-      console.log({ profile });
     },
     []
   );
 
+  // Return the context provider with value containing user profile and callback functions
   return (
     <authContext.Provider value={{ userProfile, onSignOut, onSaveSession }}>
       {children}
     </authContext.Provider>
   );
 };
-export default AuthProvider;
 
-export const useAuth = () => {
-  return useContext(authContext);
-};
+export default AuthProvider;
